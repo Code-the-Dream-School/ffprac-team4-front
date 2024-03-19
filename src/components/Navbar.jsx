@@ -1,29 +1,32 @@
-// Navbar.js
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/toys">Toys</Link>
-        </li>
-        <li>
-          <Link to="/login">Login</Link>
-        </li>
-        <li>
-          <Link to="/profile">Profile</Link>
-        </li>
-        <li>
-          <Link to="/messages">Messages</Link>
-        </li>
-        <li>
-          <Link to="/create">Create Listing</Link>
-        </li>
-      </ul>
+    <nav
+      style={{
+        display: "flex",
+        justifyContent: "space-between",
+        padding: "10px",
+      }}
+    >
+      <Link style={{ margin: "0 10px" }} to="/">
+        Home
+      </Link>
+      <Link style={{ margin: "0 10px" }} to="/toys">
+        Toys
+      </Link>
+      <Link style={{ margin: "0 10px" }} to="/login">
+        Login
+      </Link>
+      <Link style={{ margin: "0 10px" }} to="/profile">
+        Profile
+      </Link>
+      <Link style={{ margin: "0 10px" }} to="/messages">
+        Messages
+      </Link>
+      <Link style={{ margin: "0 10px" }} to="/create">
+        Create Listing
+      </Link>
     </nav>
   );
 };
