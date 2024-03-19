@@ -34,13 +34,13 @@ function App() {
         <Navbar />
         <h1>{message}</h1>
         <Routes>
-          <Route exact path="/" component={ToyList} />
-          <Route path="/toys" component={ToyList} />
-          <Route path="/toys/:id" component={ListingDetail} />
-          <Route path="/login" component={LoginPage} />
-          <Route path="/profile" component={UserProfile} />
-          <Route path="/messages" component={Messages} />
-          <Route path="/create" component={CreateListing} />
+          <Route exact path="/" Component={ToyList} />
+          <Route path="/toys" Component={ToyList} />
+          <Route path="/toys/:id" Component={ListingDetail} />
+          <Route path="/login" Component={LoginPage} />
+          <Route path="/profile" Component={UserProfile} />
+          <Route path="/messages" Component={Messages} />
+          <Route path="/create" Component={CreateListing} />
           <Route component={NotFoundPage} />
         </Routes>
       </Router>
