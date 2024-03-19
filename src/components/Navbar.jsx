@@ -15,17 +15,17 @@ const Navbar = () => {
       <Link style={{ margin: "0 10px" }} to="/toys">
         Toys
       </Link>
-      <Link style={{ margin: "0 10px" }} to="/login">
-        Login
-      </Link>
-      <Link style={{ margin: "0 10px" }} to="/profile">
-        Profile
+      <Link style={{ margin: "0 10px" }} to="/create">
+        Create Listing
       </Link>
       <Link style={{ margin: "0 10px" }} to="/messages">
         Messages
       </Link>
-      <Link style={{ margin: "0 10px" }} to="/create">
-        Create Listing
+      <Link style={{ margin: "0 10px" }} to="/profile">
+        Profile
+      </Link>
+      <Link style={{ margin: "0 10px" }} to="/login">
+        Login
       </Link>
     </nav>
   );

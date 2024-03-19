@@ -30,9 +30,9 @@ function App() {
 
   return (
     <>
-      <h1>{message}</h1>
       <Router>
         <Navbar />
+        <h1>{message}</h1>
         <Routes>
           <Route exact path="/" component={ToyList} />
           <Route path="/toys" component={ToyList} />
