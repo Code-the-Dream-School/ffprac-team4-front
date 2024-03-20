@@ -36,7 +36,7 @@ function App() {
         <Routes>
           <Route exact path="/" Component={ToyList} />
           <Route path="/toys" Component={ToyList} />
-          <Route path="/toys/:id" Component={ListingDetail} />
+          <Route path="/toyDetail" Component={ListingDetail} />
           <Route path="/login" Component={LoginPage} />
           <Route path="/profile" Component={UserProfile} />
           <Route path="/messages" Component={Messages} />
