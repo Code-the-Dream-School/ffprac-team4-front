@@ -1,31 +1,35 @@
-import React, { useState, useEffect } from 'react';
-import { getAllData } from './util/index';
+import { useState, useEffect } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import AppRoutes from "./routes/AppRoutes";
 
-const URL = 'http://localhost:8000/api/v1/';
+import { getAllData } from "./util/index";
+
+const URL = "http://localhost:8000/api/v1/";
 
 function App() {
-  
-  const [message, setMessage] = useState(''); 
+  const [message, setMessage] = useState("");
 
   useEffect(() => {
-
     (async () => {
-      const myData = await getAllData(URL)
+      const myData = await getAllData(URL);
       setMessage(myData.data);
     })();
-      
-    return () => {
-      console.log('unmounting');
-    }
 
+    return () => {
+      console.log("unmounting");
+    };
   }, []);
 
   return (
     <>
-      <h1>{message}</h1>
+      <Router>
+        <Navbar />
+        <AppRoutes />
+        <p>{message}</p>
+      </Router>
     </>
   );
-
 }
 
-export default App
+export default App;
