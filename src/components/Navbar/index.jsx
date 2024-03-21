@@ -1,30 +1,25 @@
 import { Link } from "react-router-dom";
+import styles from "./Navbar.module.css";
 
 const Navbar = () => {
   return (
-    <nav
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        padding: "10px",
-      }}
-    >
-      <Link style={{ margin: "0 10px" }} to="/">
+    <nav className={styles.navbar}>
+      <Link className={styles.link} to="/">
         Home
       </Link>
-      <Link style={{ margin: "0 10px" }} to="/toys">
+      <Link className={styles.link} to="/toys">
         Toys
       </Link>
-      <Link style={{ margin: "0 10px" }} to="/create">
+      <Link className={styles.link} to="/create">
         Create Listing
       </Link>
-      <Link style={{ margin: "0 10px" }} to="/messages">
+      <Link className={styles.link} to="/messages">
         Messages
       </Link>
-      <Link style={{ margin: "0 10px" }} to="/profile">
+      <Link className={styles.link} to="/profile">
         Profile
       </Link>
-      <Link style={{ margin: "0 10px" }} to="/login">
+      <Link className={styles.link} to="/login">
         Login
       </Link>
     </nav>

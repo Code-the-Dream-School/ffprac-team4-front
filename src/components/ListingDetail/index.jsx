@@ -1,3 +1,5 @@
+import styles from "./ListingDetail.module.css";
+
 const ListingDetail = () => {
   return (
     <div>
