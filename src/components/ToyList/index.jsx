@@ -1,3 +1,6 @@
+// import ToyList.css
+import styles from "./ToyList.module.css";
+
 const ToyList = () => {
   return (
     <div>

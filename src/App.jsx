@@ -1,14 +1,7 @@
 import { useState, useEffect } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-
+import { BrowserRouter as Router } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import ToyList from "./components/ToyList";
-import ListingDetail from "./components/ListingDetail";
-import LoginPage from "./components/LoginPage";
-import UserProfile from "./components/UserProfile";
-import Messages from "./components/Messages";
-import CreateListing from "./components/CreateListing";
-import NotFoundPage from "./components/NotFoundPage";
+import AppRoutes from "./routes/AppRoutes";
 
 import { getAllData } from "./util/index";
 
@@ -32,17 +25,8 @@ function App() {
     <>
       <Router>
         <Navbar />
-        <h1>{message}</h1>
-        <Routes>
-          <Route exact path="/" Component={ToyList} />
-          <Route path="/toys" Component={ToyList} />
-          <Route path="/toys/:id" Component={ListingDetail} />
-          <Route path="/login" Component={LoginPage} />
-          <Route path="/profile" Component={UserProfile} />
-          <Route path="/messages" Component={Messages} />
-          <Route path="/create" Component={CreateListing} />
-          <Route component={NotFoundPage} />
-        </Routes>
+        <AppRoutes />
+        <p>{message}</p>
       </Router>
     </>
   );
