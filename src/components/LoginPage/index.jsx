@@ -1,5 +1,5 @@
 import styles from "./LoginPage.module.css";
-import Login from "./Login.jsx";
+import Login from "./Login.tsx";
 
 const LoginPage = () => {
   return (
