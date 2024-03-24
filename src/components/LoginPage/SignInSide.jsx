@@ -6,10 +6,10 @@ import Link from "@mui/material/Link";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import appLogo from "../../assets/AppLogo.png";
+import GoogleIcon from "./GoogleIcon";
 
 function Copyright(props) {
   return (
@@ -75,34 +75,53 @@ export default function SignInSide() {
             }}
           >
             <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
-              {/* <LockOutlinedIcon /> */}
               <img
                 src={appLogo}
                 alt="App Logo"
                 style={{ width: "100%", height: "auto" }}
               />
             </Avatar>
-            {/* <img src="../../assets/AppLogo.png" alt="App Logo" /> */}
-            {/* <AppLogoIcon style={{ width: "25px", height: "auto" }} /> */}
-            {/* <Typography level="title-lg">PlayItForward</Typography> */}
-
             <Typography component="h1" variant="h5">
               Sign in
             </Typography>
+            <Typography component="p" variant="p" sx={{ mt: 3, mb: 2 }}>
+              Welcome to PlayItForward!
+            </Typography>
             <Box
-              component="form"
+              // component="form"
               noValidate
-              onSubmit={handleSubmit}
               sx={{ mt: 1 }}
             >
-              <Button
-                type="submit"
-                fullWidth
+              {/* <Button
                 variant="contained"
+                startIcon={<GoogleIcon />}
+                color="primary"
+                fullWidth
+                onSubmit={handleSubmit}
                 sx={{ mt: 3, mb: 2 }}
               >
-                Sign In
+                Continue with Google
+              </Button> */}
+              <Button
+                variant="contained"
+                startIcon={<GoogleIcon />}
+                fullWidth
+                onSubmit={handleSubmit}
+                sx={{
+                  mt: 3,
+                  mb: 2,
+                  background:
+                    "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
+                  color: "white",
+                  "&:hover": {
+                    background:
+                      "linear-gradient(45deg, #FE6B8B 60%, #FF8E53 100%)",
+                  },
+                }}
+              >
+                Continue with Google
               </Button>
+
               <Copyright sx={{ mt: 5 }} />
             </Box>
           </Box>
