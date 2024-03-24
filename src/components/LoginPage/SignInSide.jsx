@@ -64,14 +64,28 @@ export default function SignInSide() {
             backgroundPosition: "center",
           }}
         />
-        <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+        <Grid
+          item
+          xs={12}
+          sm={8}
+          md={5}
+          component={Paper}
+          elevation={6}
+          square
+          sx={{
+            display: "flex", // Add this line
+            flexDirection: "column", // Add this line
+            justifyContent: "center", // Add this line
+          }}
+        >
           <Box
             sx={{
-              my: 8,
+              my: "auto",
               mx: 4,
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
+              justifyContent: "center",
             }}
           >
             <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
