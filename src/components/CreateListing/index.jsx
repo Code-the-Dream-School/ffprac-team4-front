@@ -1,11 +1,13 @@
-import styles from "./CreateListing.module.css";
+import { Container, Button, Input } from "@mui/material";
+import Leftbar from "./Leftbar";
+import Rightfeed from "./Rightfeed";
 
 const CreateListing = () => {
   return (
-    <div>
-      <h1>Create Listing</h1>
-      <p>This is the page where users can create a new toy listing.</p>
-    </div>
+    <Container sx={{ display: "flex" }}>
+      <Leftbar />
+      <Rightfeed />
+    </Container>
   );
 };
 
